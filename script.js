@@ -2,14 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Change logo size on hover
     function changeLogoSize() {
         const logo = document.getElementById("logo");
-        if (logo) {
-            logo.addEventListener("mouseover", () => {
-                logo.style.width = "150px"; // Change to larger size  
-            });
-            logo.addEventListener("mouseout", () => {
-                logo.style.width = "120px"; // Revert to original size
-            });
-        }
+        logo.addEventListener("mouseover", () => {
+            logo.style.width = "150px"; // Change to larger size  
+        });
+        logo.addEventListener("mouseout", () => {
+            logo.style.width = "120px"; // Revert to original size
+        });
     }
 
     // 2. Highlight nav links on hover
@@ -28,11 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 4. Change main image border radius on double-click
     function changeMainImageBorderRadius() {
         const mainImage = document.getElementById("main-dog-image");
-        if (mainImage) {
-            mainImage.addEventListener("dblclick", () => {
-                mainImage.style.borderRadius = mainImage.style.borderRadius === "50%" ? "0" : "50%"; // Toggle border radius
-            });
-        }
+        mainImage.addEventListener("dblclick", () => {
+            mainImage.style.borderRadius = mainImage.style.borderRadius === "50%" ? "0" : "50%"; // Toggle border radius
+        });
     }
 
     // 5. Toggle category images visibility on button click
@@ -54,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const serviceBoxes = document.querySelectorAll(".service-box");
         serviceBoxes.forEach((box) => {
             box.addEventListener("mouseover", () => {
-                box.style.backgroundColor = "#ffe0b2";// Change background color
+                box.style.backgroundColor = "#ffe0b2"; // Change background color
             });
             box.addEventListener("mouseout", () => {
                 box.style.backgroundColor = "#fff8e1"; // Revert to original color
@@ -79,14 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function changeSubscriptionText() {
         const subscribeTitle = document.querySelector("#subscribe h3");
         const emailInput = document.querySelector("#subscribe input");
-        if (subscribeTitle && emailInput) {
-            emailInput.addEventListener("focus", () => {
-                subscribeTitle.textContent = "Enter your email to receive updates!";
-            });
-            emailInput.addEventListener("blur", () => {
-                subscribeTitle.textContent = "Subscribe & Get Updates";
-            });
-        }
+        emailInput.addEventListener("focus", () => {
+            subscribeTitle.textContent = "Enter your email to receive updates!";
+        });
+        emailInput.addEventListener("blur", () => {
+            subscribeTitle.textContent = "Subscribe & Get Updates";
+        });
     }
 
     // 9. Toggle footer link colors on mouseover
@@ -103,13 +97,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 10. Add border on banner button click
-    function addBorderOnButtonClick() {
+    function addBorderOnBannerButtonClick() {
         const learnMoreButton = document.querySelector(".learn-more-btn");
-        if (learnMoreButton) {
-            learnMoreButton.addEventListener("click", () => {
-                learnMoreButton.style.border = "2px solid #333";
+        learnMoreButton.addEventListener("click", () => {
+            learnMoreButton.style.border = "2px solid #333";
+        });
+    }
+
+    // 11. Change explore button color in services section
+    function changeExploreButtonColor() {
+        const exploreButtons = document.querySelectorAll(".explore-btn");
+        exploreButtons.forEach((button) => {
+            button.addEventListener("mouseover", () => {
+                button.style.backgroundColor = "#ff5722";
+                button.style.color = "white";
             });
-        }
+            button.addEventListener("mouseout", () => {
+                button.style.backgroundColor = "transparent";
+                button.style.color = "#333";
+            });
+        });
     }
 
     // Call all functions to apply the event listeners
@@ -121,5 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateReviewButtonColor();
     changeSubscriptionText();
     toggleFooterLinkColors();
-    addBorderOnButtonClick(); // Call the button border function
+    addBorderOnBannerButtonClick();
+    changeExploreButtonColor();
 });
