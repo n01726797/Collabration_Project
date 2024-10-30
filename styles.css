@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f6f2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffa726;
+}
+
+#logo {
+    width: 120px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a, .sign-up-btn {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#banner {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffe0b2;
+}
+
+#banner h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.learn-more-btn {
+    background-color: #fb8c00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#main-dog-image {
+    margin-top: 20px;
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+
+
+#categories {
+    padding: 20px;
+    background-color: #ffca28;
+    text-align: center;
+}
+
+#categories h3 {
+    margin-bottom: 10px;
+}
+
+.category-images img {
+    width: 80px; /* Fixed size for consistency */
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    object-fit: cover;
+}
+
+#services {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 10px;
+    background-color: #ffe0b2;
+    gap: 20px;
+}
+
+.service-box {
+    background-color: #fff8e1;
+    padding: 20px;
+    width: 45%; /* Adjusted for better layout */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#reviews {
+    padding: 30px;
+    text-align: center;
+    background-color: #ffb74d;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-navigation button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+#subscribe {
+    padding: 20px;
+    background-color: #ffa726;
+    text-align: center;
+}
+
+#subscribe h3 {
+    margin-bottom: 10px;
+}
+
+#subscribe input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav a {
+    color: #ffa726;
+    text-decoration: none;
+    margin: 0 10px;
+}
