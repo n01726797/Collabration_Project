@@ -119,6 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 12. Toggle visibility of customer review image on click
+    const reviewImage = document.querySelector(".review img");
+    if (reviewImage) {
+        reviewImage.addEventListener("click", () => {
+            reviewImage.style.display = reviewImage.style.display === "none" ? "block" : "none";
+        });
+    }
+
     // Call all functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
@@ -128,6 +136,4 @@ document.addEventListener("DOMContentLoaded", () => {
     updateReviewButtonColor();
     changeSubscriptionText();
     toggleFooterLinkColors();
-    addBorderOnBannerButtonClick();
-    changeExploreButtonColor();
 });
