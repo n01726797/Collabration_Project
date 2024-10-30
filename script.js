@@ -36,10 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Function to change main image border radius on double-click
+    function changeMainImageBorderRadius() {
+        const mainImage = document.getElementById("main-dog-image");
+        if (mainImage) { // Check if main image element exists
+            mainImage.addEventListener("dblclick", () => {
+                mainImage.style.borderRadius = mainImage.style.borderRadius === "50%" ? "0" : "50%";
+            });
+        }
+    }
+
     // Call the functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
     changeBannerTextColor();
+    changeMainImageBorderRadius();
 });
-
-
