@@ -91,6 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 9. Toggle footer link colors on mouseover
+    function toggleFooterLinkColors() {
+        const footerLinks = document.querySelectorAll("footer nav a");
+        footerLinks.forEach((link) => {
+            link.addEventListener("mouseover", () => {
+                link.style.color = "yellow"; // Change color on mouseover
+            });
+            link.addEventListener("mouseout", () => {
+                link.style.color = "#ffa726"; // Revert to original color
+            });
+        });
+    }
+
     // Call all functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
@@ -100,5 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     hoverEffectOnServiceBoxes();
     updateReviewButtonColor();
     changeSubscriptionText(); // Call the subscription text change function
+    toggleFooterLinkColors(); // Call the footer link color toggle function
 });
-
+g
