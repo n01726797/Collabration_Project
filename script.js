@@ -23,14 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. Change banner text color on click
-    function changeBannerTextColor() {
-        const bannerTitle = document.querySelector("#banner h1");
-        bannerTitle.addEventListener("click", () => {
-            bannerTitle.style.color = bannerTitle.style.color === "blue" ? "#333" : "blue"; // Toggle color
-        });
-    }
-
     // 4. Change main image border radius on double-click
     function changeMainImageBorderRadius() {
         const mainImage = document.getElementById("main-dog-image");
@@ -107,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Call all functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
-    changeBannerTextColor();
     changeMainImageBorderRadius();
     toggleCategoryImagesVisibility();
     hoverEffectOnServiceBoxes();
@@ -115,4 +106,3 @@ document.addEventListener("DOMContentLoaded", () => {
     changeSubscriptionText(); // Call the subscription text change function
     toggleFooterLinkColors(); // Call the footer link color toggle function
 });
-g
