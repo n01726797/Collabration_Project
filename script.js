@@ -60,13 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Function for hover effect on service boxes
+    function hoverEffectOnServiceBoxes() {
+        const serviceBoxes = document.querySelectorAll(".service-box");
+        serviceBoxes.forEach((box) => {
+            box.addEventListener("mouseover", () => {
+                box.style.backgroundColor = "#ffe0b2"; // Change background color on hover
+            });
+            box.addEventListener("mouseout", () => {
+                box.style.backgroundColor = "#fff8e1"; // Revert background color
+            });
+        });
+    }
+
     // Call the functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
     changeBannerTextColor();
     changeMainImageBorderRadius();
     toggleCategoryImages();
+    hoverEffectOnServiceBoxes();
 });
-
-
-
