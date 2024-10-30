@@ -137,6 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 14. Change footer background color on double-click
+    const footer = document.querySelector("footer");
+    if (footer) {
+        footer.addEventListener("dblclick", () => {
+            footer.style.backgroundColor = footer.style.backgroundColor === "#333" ? "#444" : "#333";
+        });
+    }
+
     // Call all functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
