@@ -125,6 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
         reviewImage.addEventListener("click", () => {
             reviewImage.style.display = reviewImage.style.display === "none" ? "block" : "none";
         });
+    } 
+    // 13. Make the sign-up button bold on hover
+    const signUpButton = document.querySelector(".sign-up-btn");
+    if (signUpButton) {
+        signUpButton.addEventListener("mouseover", () => {
+            signUpButton.style.fontWeight = "bold";
+        });
+        signUpButton.addEventListener("mouseout", () => {
+            signUpButton.style.fontWeight = "normal";
+        });
     }
 
     // Call all functions to apply the event listeners
