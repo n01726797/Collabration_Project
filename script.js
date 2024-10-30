@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const serviceBoxes = document.querySelectorAll(".service-box");
         serviceBoxes.forEach((box) => {
             box.addEventListener("mouseover", () => {
-                box.style.backgroundColor = "#ffe0b2"; // Change background color
+                box.style.backgroundColor = "#ffe0b2";// Change background color
             });
             box.addEventListener("mouseout", () => {
                 box.style.backgroundColor = "#fff8e1"; // Revert to original color
