@@ -104,20 +104,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 11. Change explore button color in services section
-    function changeExploreButtonColor() {
-        const exploreButtons = document.querySelectorAll(".explore-btn");
-        exploreButtons.forEach((button) => {
-            button.addEventListener("mouseover", () => {
-                button.style.backgroundColor = "#ff5722";
-                button.style.color = "white";
-            });
-            button.addEventListener("mouseout", () => {
-                button.style.backgroundColor = "transparent";
-                button.style.color = "#333";
-            });
-        });
-    }
+   // 11. Change explore button color in services section
+   const exploreButtons = document.querySelectorAll(".explore-btn");
+   exploreButtons.forEach((button) => {
+       button.addEventListener("mouseover", () => {
+           button.style.backgroundColor = "#ff5722";
+           button.style.color = "white";
+       });
+       button.addEventListener("mouseout", () => {
+           button.style.backgroundColor = "transparent";
+           button.style.color = "#333";
+       });
+       // 15. Show alert message on explore button click in the services section
+       button.addEventListener("click", () => {
+           alert("Explore our pet services!");
+       });
+   });
 
     // 12. Toggle visibility of customer review image on click
     const reviewImage = document.querySelector(".review img");
@@ -142,7 +144,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (footer) {
         footer.addEventListener("dblclick", () => {
             footer.style.backgroundColor = footer.style.backgroundColor === "#333" ? "#444" : "#333";
-        });
+        }); 
+        
     }
 
     // Call all functions to apply the event listeners
