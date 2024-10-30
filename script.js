@@ -46,9 +46,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Function to toggle category images visibility on button click
+    function toggleCategoryImages() {
+        const categoryImages = document.querySelectorAll(".category-images img");
+        const toggleCategoriesButton = document.createElement("button");
+        toggleCategoriesButton.textContent = "Show/Hide Categories";
+        document.body.insertBefore(toggleCategoriesButton, document.getElementById("categories"));
+
+        toggleCategoriesButton.addEventListener("click", () => {
+            categoryImages.forEach((img) => {
+                img.style.display = img.style.display === "none" ? "block" : "none";
+            });
+        });
+    }
+
     // Call the functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
     changeBannerTextColor();
     changeMainImageBorderRadius();
+    toggleCategoryImages();
 });
+
+
+
