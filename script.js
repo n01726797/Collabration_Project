@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Function to change logo size on hover
+    // 1. Change logo size on hover
     function changeLogoSize() {
         const logo = document.getElementById("logo");
-        if (logo) { // Check if logo element exists
-            logo.addEventListener("mouseover", () => {
-                logo.style.width = "150px"; // Change to larger size
-            });
-            logo.addEventListener("mouseout", () => {
-                logo.style.width = "120px"; // Revert to original size
-            });
-        }
+        logo.addEventListener("mouseover", () => {
+            logo.style.width = "150px"; // Change to larger size
+        });
+        logo.addEventListener("mouseout", () => {
+            logo.style.width = "120px"; // Revert to original size
+        });
     }
 
-    // Function to highlight nav links on hover
+    // 2. Highlight nav links on hover
     function highlightNavLinks() {
         const navLinks = document.querySelectorAll("nav ul li a");
         navLinks.forEach((link) => {
@@ -25,59 +23,82 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Function to change banner text color on click
+    // 3. Change banner text color on click
     function changeBannerTextColor() {
         const bannerTitle = document.querySelector("#banner h1");
-        if (bannerTitle) { // Check if bannerTitle element exists
-            bannerTitle.addEventListener("click", () => {
-                // Toggle the color between blue and default color
-                bannerTitle.style.color = bannerTitle.style.color === "blue" ? "#333" : "blue";
-            });
-        }
+        bannerTitle.addEventListener("click", () => {
+            bannerTitle.style.color = bannerTitle.style.color === "blue" ? "#333" : "blue"; // Toggle color
+        });
     }
 
-    // Function to change main image border radius on double-click
+    // 4. Change main image border radius on double-click
     function changeMainImageBorderRadius() {
         const mainImage = document.getElementById("main-dog-image");
-        if (mainImage) { // Check if main image element exists
-            mainImage.addEventListener("dblclick", () => {
-                mainImage.style.borderRadius = mainImage.style.borderRadius === "50%" ? "0" : "50%";
-            });
-        }
+        mainImage.addEventListener("dblclick", () => {
+            mainImage.style.borderRadius = mainImage.style.borderRadius === "50%" ? "0" : "50%"; // Toggle border radius
+        });
     }
 
-    // Function to toggle category images visibility on button click
-    function toggleCategoryImages() {
+    // 5. Toggle category images visibility on button click
+    function toggleCategoryImagesVisibility() {
         const categoryImages = document.querySelectorAll(".category-images img");
         const toggleCategoriesButton = document.createElement("button");
         toggleCategoriesButton.textContent = "Show/Hide Categories";
         document.body.insertBefore(toggleCategoriesButton, document.getElementById("categories"));
-
+        
         toggleCategoriesButton.addEventListener("click", () => {
             categoryImages.forEach((img) => {
-                img.style.display = img.style.display === "none" ? "block" : "none";
+                img.style.display = img.style.display === "none" ? "block" : "none"; // Toggle visibility
             });
         });
     }
 
-    // Function for hover effect on service boxes
+    // 6. Hover effect on service boxes to change background color
     function hoverEffectOnServiceBoxes() {
         const serviceBoxes = document.querySelectorAll(".service-box");
         serviceBoxes.forEach((box) => {
             box.addEventListener("mouseover", () => {
-                box.style.backgroundColor = "#ffe0b2"; // Change background color on hover
+                box.style.backgroundColor = "#ffe0b2"; // Change background color
             });
             box.addEventListener("mouseout", () => {
-                box.style.backgroundColor = "#fff8e1"; // Revert background color
+                box.style.backgroundColor = "#fff8e1"; // Revert to original color
             });
         });
     }
 
-    // Call the functions to apply the event listeners
+    // 7. Update review navigation buttons' color on click
+    function updateReviewButtonColor() {
+        const reviewButtons = document.querySelectorAll(".review-navigation button");
+        reviewButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                button.style.backgroundColor = "green"; // Change color on click
+                setTimeout(() => {
+                    button.style.backgroundColor = "#333"; // Revert after 300ms
+                }, 300);
+            });
+        });
+    }
+
+    // 8. Change text in subscription section on focus
+    function changeSubscriptionText() {
+        const subscribeTitle = document.querySelector("#subscribe h3");
+        const emailInput = document.querySelector("#subscribe input");
+        emailInput.addEventListener("focus", () => {
+            subscribeTitle.textContent = "Enter your email to receive updates!";
+        });
+        emailInput.addEventListener("blur", () => {
+            subscribeTitle.textContent = "Subscribe & Get Updates";
+        });
+    }
+
+    // Call all functions to apply the event listeners
     changeLogoSize();
     highlightNavLinks();
     changeBannerTextColor();
     changeMainImageBorderRadius();
-    toggleCategoryImages();
+    toggleCategoryImagesVisibility();
     hoverEffectOnServiceBoxes();
+    updateReviewButtonColor();
+    changeSubscriptionText(); // Call the subscription text change function
 });
+
