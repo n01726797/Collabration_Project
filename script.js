@@ -34,16 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // 5. Toggle category images visibility on button click
     function toggleCategoryImagesVisibility() {
         const categoryImages = document.querySelectorAll(".category-images img");
-        const toggleCategoriesButton = document.createElement("button");
-        toggleCategoriesButton.textContent = "Show/Hide Categories";
-        document.body.insertBefore(toggleCategoriesButton, document.getElementById("categories"));
-        
+        const toggleCategoriesButton = document.getElementById("toggleCategoriesButton");
+    
         toggleCategoriesButton.addEventListener("click", () => {
             categoryImages.forEach((img) => {
                 img.style.display = img.style.display === "none" ? "block" : "none"; // Toggle visibility
             });
         });
     }
+    
 
     // 6. Hover effect on service boxes to change background color
     function hoverEffectOnServiceBoxes() {
