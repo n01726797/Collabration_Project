@@ -111,21 +111,32 @@ nav ul li a, .sign-up-btn {
 }
 
 #services {
-    display: flex;
-    justify-content: space-around;
+    text-align: center; /* Center the text */
     padding: 30px 10px;
     background-color: #ffe0b2;
-    gap: 20px;
+}
+
+.pos {
+    font-size: 2rem; /* Adjust the font size for better visibility */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.service-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the service boxes horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between the service boxes */
 }
 
 .service-box {
     background-color: #fff8e1;
     padding: 20px;
-    width: 45%;
-    text-align: center;
+    width: 300px; /* Set a fixed width for consistency */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text inside each box */
 }
+
 
 .service-box img {
     width: 60px;
