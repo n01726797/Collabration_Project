@@ -178,17 +178,40 @@ nav ul li a, .sign-up-btn {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text for visibility */
+    padding: 20px; /* Space around the content */
+    text-align: center; /* Center text */
+    position: relative; /* For positioning */
 }
 
-footer nav a {
-    color: #ffa726;
-    text-decoration: none;
-    margin: 0 10px;
+.footer-content {
+    margin-bottom: 10px; /* Space between nav and copyright */
 }
+
+.footer-nav {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-nav a {
+    color: #ffa726; /* Link color */
+    text-decoration: none; /* No underline */
+    margin: 0 10px; /* Space between links */
+    padding: 5px; /* Space around links for better touch target */
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.footer-nav a:hover {
+    color: #fb8c00; /* Lighter color on hover */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
 
 .al {
     display: flex;
