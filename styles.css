@@ -1,4 +1,4 @@
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,11 +38,23 @@ nav ul li a, .sign-up-btn {
     text-align: center;
     padding: 30px;
     background-color: #ffe0b2;
+    position: relative;
+}
+
+.shifted-heading {
+    text-align: left;
+    padding-left: 20px; /* Adjust to shift right */
+    color: #333;
+}
+
+#banner h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 #banner h1 {
     font-size: 2.5rem;
-    color: #333;
+    margin-top: 0;
 }
 
 .learn-more-btn {
@@ -60,8 +72,6 @@ nav ul li a, .sign-up-btn {
     max-width: 100%;
 }
 
-
-
 #categories {
     padding: 20px;
     background-color: #ffca28;
@@ -71,19 +81,13 @@ nav ul li a, .sign-up-btn {
 #categories h3 {
     margin-bottom: 10px;
 }
-.pos{
-    text-align: center;
-    margin-top: 50px;
-}
-.category-images img {
-   
 
-    width: 80px; /* Fixed size for consistency */
+.category-images img {
+    width: 80px;
     height: 80px;
     border-radius: 50%;
     margin: 10px;
     object-fit: cover;
-    
 }
 
 #services {
@@ -97,7 +101,7 @@ nav ul li a, .sign-up-btn {
 .service-box {
     background-color: #fff8e1;
     padding: 20px;
-    width: 45%; /* Adjusted for better layout */
+    width: 45%;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -166,72 +170,7 @@ footer nav a {
     margin: 0 10px;
 }
 
-.al{
+.al {
     display: flex;
     justify-content: space-between;
 }
-.contact{
-    text-align: center;
-}
-.size{
-    font-size: 50px;
-    margin-bottom: 5px;
-}
-  .info{
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  form {
-    display: inline-block;
-    /* Form outline */
-    padding: 5em;
-    border: 1px solid #ffa726;
-    
-    border-radius: 1em;
-  }
-  
-  .all{
-    margin-top: 1em;
-  }
-  
-  .fon {
-    /* Uniform size & alignment */
-    display: inline-block;
-    min-width: 90px;
-    text-align: right;
-  }
-  
-  input,
-  textarea {
-    /* To make sure that all text fields have the same font settings
-       By default, text areas have a monospace font */
-    font: 2em sans-serif;
-    /* Uniform text field size */
-    width: 300px;
-    box-sizing: border-box;
-    /* Match form field borders */
-    border: 1px solid #999;
-    margin-top:10px;
-  }
-  
-  input:focus,
-  textarea:focus {
-    /* Set the outline width and style */
-    outline-style: solid;
-    /* To give a little highlight on active elements */
-    outline-color: #000;
-  }
-  
-  textarea {
-    /* Align multiline text fields with their labels */
-    vertical-align: top;
-    /* Provide space to type some text */
-    height: 5em;
-  }
-  
-  .btn {
-
-    margin-top: 0.5em;
-    padding-left: 90px; 
-  }
-  
